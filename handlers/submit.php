@@ -24,6 +24,11 @@
 			// 			<span>Lastname: $lastname </span><br>
 			// 			<span>Gender: $gender </span><br>";
 
+			// UPDATE table_name
+			// SET column1 = value1, column2 = value2, ...
+			// WHERE condition;
+
+			
 		}  else {
 			echo "not submitted";	
 		}	

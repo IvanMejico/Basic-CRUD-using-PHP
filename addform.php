@@ -6,8 +6,8 @@
 		<div class="input-div">
 			<div class="main-panel">
 				<h1>Add Student</h1>
-				<form method="POST">
-					<select name="course" target="#">
+				<form method="POST" action="index.php">
+					<select name="course" target="self">
 						<option value="bscpe">BSCpE</option>
 						<option value="bsce">BSCE</option>
 						<option value="bsme">BSME</option>

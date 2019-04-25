@@ -1,3 +1,3 @@
 <div class="header">
-	<h1>Lab Activity</h1>
+	<h1>Online Tech Lab Activity</h1>
 </div>

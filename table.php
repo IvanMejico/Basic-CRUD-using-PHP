@@ -3,7 +3,7 @@
 
 <div class="table-div">
 	<h2>Students</h2>
-	<form>
+	<form method="POST">
 		<input type="text" name="search">
 		<input type="submit" name="search-btn" value="Search">
 	</form>
@@ -18,8 +18,13 @@
 		<th></th>
 	</tr>
 	<?php 
-
-	$query = "SELECT * FROM students";
+	if (isset($_POST['search-btn'])) {
+		$key = $_POST['search'];
+		$query = "SELECT * FROM students WHERE studentid LIKE '%".$key."%' OR firstname LIKE '%".$key."%' OR middlename LIKE '%".$key."%' OR lastname LIKE '%".$key."%'";
+	} else {
+		$query = "SELECT * FROM students";	
+	}
+	
 	$result = $con->query($query);
 	// $con->close();
 	if ($result->num_rows > 0) {
@@ -32,8 +37,8 @@
 			 	. "<td>" . $row["lastname"] . "</td>"
 			 	. "<td>" . $row["gender"] . "</td>";
 			echo "<td>";
-			echo "<a href='index.php?delete=".$row['studentid']."'>Edit</a>";
-			echo "<a href='index.php?edit=".$row['studentid']."'>Delete</a>";
+			echo "<a href='index.php?edit=".$row['studentid']."'>Edit</a>";
+			echo "<a href='index.php?delete=".$row['studentid']."'>Delete</a>";
 			echo "</td>";
 			echo "</tr>";
 		}

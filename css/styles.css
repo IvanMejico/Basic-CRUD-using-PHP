@@ -2,11 +2,11 @@ body {
 	background-color: #474747;
 	margin: 0;
 	padding: 0;
+	font-family: Arial;
 }
 
 h1 {
 	margin-top: 0;
-	font-family: Arial ;
 }
 
 .header {
@@ -15,7 +15,6 @@ h1 {
 	height: 40px;
 	padding-top: 10px;
 	text-align: center;
-	font-family: Arial;
 	color: #1b1818;
 	border-bottom: 3px solid #ff7c00;
 }
@@ -72,14 +71,23 @@ h1 {
 }
 .table-div {
 	float: left;
-	width: 68%;
-	height: 300px;
-	padding-left: 50px;
-	/*background-color: #233;*/
+	margin-top: 50px;
+	margin-left: 160px;
+	padding: 20px;
+	background-color: #d1c8c3;
+	border-radius: 6px;
 }
 
 .table-div h2 {
-	color: white;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.table-div input {
+	padding: 3px;
+	border-radius: 5px;
+	border: 1px solid rgb(191, 196, 204);
 }
 
 table {
@@ -101,4 +109,17 @@ td {
 	background-color: gray;
 	color: white;
 	padding: 4px;
+}
+
+table a {
+	background-color: #6394e2;
+	padding: 2px;
+	margin: 3px;
+	border: 1px solid black;
+	color: white;
+	text-decoration: none;
+}
+
+table a:hover {
+	background-color: #214f99;
 }

@@ -7,7 +7,13 @@
 	</head>
 	<body>
 		<?php include("header.php")?>
-		<?php include("form.php")?>
+		<?php 
+			if (isset($_GET['edit'])) {
+				include("editform.php");
+			} else {
+				include("addform.php");
+			}
+		?>
 		<?php include("table.php") ?>
 		<?php $con->close(); ?>
 	</body>
