@@ -1,4 +1,18 @@
 <?php include_once("connect.php") ?>
+<?php include("classes/Student.php")?>
+
+<?php 
+$student = new Student($con); 
+$message = "";
+?>
+
+<?include("handlers/errors.php");?>
+<?include("handlers/submit.php");?>
+<?include("handlers/update.php");?>
+<?include("handlers/delete.php");?>
+
+
+
 <!DOCTYPE HTML>
 <html>
 	<head>

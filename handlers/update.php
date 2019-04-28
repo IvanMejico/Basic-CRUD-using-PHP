@@ -13,10 +13,7 @@
 
 
 			//UPDATE DATA FROM THE DATABASE
-			$query = "UPDATE students SET studentid='$studentid', course='$course', firstname='$firstname', middlename='$middlename', lastname='$lastname', gender='$gender' WHERE studentid=$studentid";
-			if ($con->query($query)) {
-				echo "submitted";
-			}			
+			$message = $student->updateStudent($studentid, $course, $firstname, $middlename, $lastname, $gender);
 		}  else {
 			echo "not submitted";	
 		}	

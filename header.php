@@ -1,3 +1,3 @@
 <div class="header">
-	<h1>Online Tech Lab Activity</h1>
+	<h1>Simple PHP CRUD Web App</h1>
 </div>

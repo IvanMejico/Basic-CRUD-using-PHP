@@ -1,8 +1,3 @@
-<?php 
-	//perhaps handle errors later
-	include("handlers/errors.php");
-	
-?>
 		<div class="input-div">
 			<div class="main-panel">
 				<h1>Add Student</h1>
@@ -43,5 +38,3 @@
 			</div>
 			<?php include("footer.php")?>
 		</div>
-
-<?php include("handlers/submit.php");?>

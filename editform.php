@@ -1,6 +1,5 @@
 <?php 
 	//perhaps handle errors later
-	include("handlers/errors.php");
 	$studentid = $_GET['edit'];
 	$query = "SELECT * FROM students WHERE studentid='$studentid'";
 	$result = $con->query($query);
@@ -87,9 +86,9 @@
 					<input type="radio" name="gender" value="female" <?php echo $female ?> >Female
 					<input type="radio" name="gender" value="other" <?php echo $other ?> >Other
 					</p>
-					<p><input type="submit" name="btn-submit" value="Submit"></p>
+					<p class="p-submit"><input type="submit" name="btn-submit" value="Submit"></p>
 				</form>
-
+				<a href="../ol_labactivity" id="cancel">Cancel</a>
 
 				<div>
 					
