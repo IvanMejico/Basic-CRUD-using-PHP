@@ -95,6 +95,7 @@
 					
 				</div>
 			</div>
+			<?php include('footer.php') ?>
 		</div>
 
-<?php include("handlers/submit.php");?>
+<?php include("handlers/update.php");?>

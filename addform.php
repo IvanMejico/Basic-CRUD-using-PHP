@@ -40,12 +40,8 @@
 					</p>
 					<p><input type="submit" name="btn-submit" value="Submit"></p>
 				</form>
-
-
-				<div>
-					
-				</div>
 			</div>
+			<?php include("footer.php")?>
 		</div>
 
 <?php include("handlers/submit.php");?>
