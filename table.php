@@ -1,14 +1,17 @@
 <div class="right-div">
 	<div class="table-div">
-		<h2>Students</h2>
-		<form class="search-form" method="GET">
-			<input type="text" name="search">
-			<button type="submit" name="search-btn" value="search">Search</button>
-		</form>
-		<a href="../ol_labactivity" class="refresh">Refresh</a>
-		
-		<div class="table-inner-div">
-		<?php echo $message; ?>
+		<div>
+			<h2>Students</h2>
+		</div>
+		<div class="form-div">
+			<form class="search-form" method="GET">
+				<input type="text" name="search">
+				<button type="submit" name="search-btn" value="search">Search</button>
+			</form>
+			<a href="../ol_labactivity" class="refresh">Refresh</a>
+		</div>
+		<div class="table-inner-div">			
+			<?php echo $message; ?>
 			<table>
 			<tr>
 				<th>Student ID</th>

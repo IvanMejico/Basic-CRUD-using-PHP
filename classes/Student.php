@@ -34,18 +34,18 @@
                     echo "</td>";
                     echo "</tr>";
                 }
-                echo "<span class='message-green'>$num_rows record(s) found</span>";
+                echo "<span class='message message-blue'>$num_rows record(s) found</span>";
             } else {
-                echo "<span class='message-red'>No record found</span>";
+                echo "<span class='message message-red'>No record found</span>";
             }
         }
 
         function addStudent($studentId, $course, $firstName, $middleName, $lastName, $gender) {
             $queryString = "INSERT INTO students (studentid, course, firstname, middlename, lastname, gender) VALUES ('$studentId', '$course', '$firstName', '$middleName', '$lastName', '$gender');";
             if(mysqli_query($this->con, $queryString) == TRUE) {
-                return "<span class='message-green'>Student no. $studentId added.</span>";
+                return "<span class='message message-green'>Student no. $studentId added.</span>";
             } else {
-                return "<span class='message-red'>No data submitted.</span>";
+                return "<span class='message message-red'>No data submitted.</span>";
             }
         }
 
@@ -53,18 +53,18 @@
             // echo $this->id;
             $queryString = "UPDATE students SET studentid='$studentId', course='$course', firstname='$firstName', middlename='$middleName', lastname='$lastName', gender='$gender' WHERE studentid='$old_id'";
             if(mysqli_query($this->con, $queryString) == TRUE) {
-                return "<span class='message-green'>Student no. $studentId updated.</span>";
+                return "<span class='message message-green'>Student no. $studentId updated.</span>";
             } else {
-                return "<span class='message-green'>Student no. $studentId not updated.</span>";
+                return "<span class='message message-green'>Student no. $studentId not updated.</span>";
             }
         }
 
         function deleteStudent($studentId) {
             $query = "DELETE FROM students WHERE studentid='$studentId'";
 		    if(mysqli_query($this->con, $query) == TRUE) {
-			    return "<span class='message-red'>Student no. $studentId deleted</span>";
+			    return "<span class='message message-red'>Student no. $studentId deleted</span>";
 		    } else {
-			    return "<span class='message-red'>Student no. $studentId not deleted</span>";
+			    return "<span class='message message-red'>Student no. $studentId not deleted</span>";
             }
         }
     }
