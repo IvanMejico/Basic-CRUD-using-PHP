@@ -11,10 +11,9 @@
 
 
 			//UPDATE DATA FROM THE DATABASE
-			$message = $student->updateStudent($studentid, $course, $firstname, $middlename, $lastname, $gender, $old_id);
-			
-		}  else {
-			echo "not submitted";	
-		}	
+			if (count($errors->errorArray)!=0) {
+				$message = $student->updateStudent($studentid, $course, $firstname, $middlename, $lastname, $gender, $old_id);
+			}
+		}
 	}
 ?>

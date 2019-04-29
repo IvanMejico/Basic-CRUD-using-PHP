@@ -3,4 +3,5 @@
         $id=$_GET['delete'];
         $message = $student->deleteStudent($id);
     }
+    
 ?>

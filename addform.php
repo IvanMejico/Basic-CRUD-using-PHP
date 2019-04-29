@@ -11,25 +11,24 @@
 					</select>
 
 					<p>
-						<span class="errormessage"><?php echo $error['studentid'] ?></span>
+						<span class="errormessage"><?php echo $errors->getError(Errors::$IDERROR) ?></span>
 						<input type="text" name="studentid" placeholder="Student ID" >
 					</p>
 					<p>
-						<span class="errormessage"><?php echo $error['firstname'] ?></span>
+						<span class="errormessage"><?php echo $errors->getError(Errors::$FIRSTNAMEERROR) ?></span>
 						<input type="text" name="firstname" placeholder="First Name" >
 					</p>
 					<p>
-						<span class="errormessage"><?php echo $error['middlename'] ?></span>
+						<span class="errormessage"><?php echo $errors->getError(Errors::$MIDDLENAMEERROR) ?></span>
 						<input type="text" name="middlename" placeholder="Middle Name" >
 					</p>
 					<p>
-						<span class="errormessage"><?php echo $error['lastname'] ?></span>
+						<span class="errormessage"><?php echo $errors->getError(Errors::$LASTNAMEERROR) ?></span>
 						<input type="text" name="lastname" placeholder="Last Name" >
 					</p>
 
 					<p>
-					<span class="errormessage"><?php echo $error['gender'] ?></span>
-					<input type="radio" name="gender" value="male">Male
+					<input type="radio" name="gender" value="male" checked>Male
 					<input type="radio" name="gender" value="female">Female
 					<input type="radio" name="gender" value="other">Other
 					</p>

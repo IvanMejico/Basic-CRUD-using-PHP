@@ -1,5 +1,4 @@
 <?php 
-	//perhaps handle errors later
 	$studentid = $_GET['edit'];
 	$query = "SELECT * FROM students WHERE studentid='$studentid'";
 	$result = $con->query($query);
@@ -17,6 +16,8 @@
 	$male='';
 	$female='';
 	$other='';
+
+	//SET SELECTED COURSE
 	switch ($row['course']) {
 		case 'bscpe':
 			$bscpe="selected";
@@ -37,6 +38,7 @@
 			break;
 	}
 
+	//SET SELECTED GENDER
 	switch ($row['gender']) {
 		case 'male':
 			$male="checked='checked'";
@@ -65,24 +67,23 @@
 					</select>
 
 					<p>
-						<span class="errormessage"><?php echo $error['studentid'] ?></span>
+					<span class="errormessage"><?php echo $errors->getError(Errors::$IDERROR) ?></span>
 						<input type="text" name="studentid" placeholder="Student ID" value=<?php echo $row['studentid'] ?>>
 					</p>
 					<p>
-						<span class="errormessage"><?php echo $error['firstname'] ?></span>
+					<span class="errormessage"><?php echo $errors->getError(Errors::$FIRSTNAMEERROR) ?></span>
 						<input type="text" name="firstname" placeholder="First Name" value=<?php echo $row['firstname']?>>
 					</p>
 					<p>
-						<span class="errormessage"><?php echo $error['middlename'] ?></span>
+					<span class="errormessage"><?php echo $errors->getError(Errors::$MIDDLENAMEERROR) ?></span>
 						<input type="text" name="middlename" placeholder="Middle Name" value=<?php echo $row['middlename']?>>
 					</p>
 					<p>
-						<span class="errormessage"><?php echo $error['lastname'] ?></span>
+					<span class="errormessage"><?php echo $errors->getError(Errors::$LASTNAMEERROR) ?></span>
 						<input type="text" name="lastname" placeholder="Last Name" value=<?php echo $row['lastname']?>>
 					</p>
 
 					<p>
-					<span class="errormessage"><?php echo $error['gender'] ?></span>
 					<input type="radio" name="gender" value="male" <?php echo $male ?> >Male
 					<input type="radio" name="gender" value="female" <?php echo $female ?> >Female
 					<input type="radio" name="gender" value="other" <?php echo $other ?> >Other
@@ -97,5 +98,3 @@
 			</div>
 			<?php include('footer.php') ?>
 		</div>
-
-<?include("handlers/update_handler.php");?>		

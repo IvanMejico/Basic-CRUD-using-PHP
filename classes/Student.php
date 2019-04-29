@@ -45,12 +45,12 @@
             if(mysqli_query($this->con, $queryString) == TRUE) {
                 return "<span class='message-green'>Student no. $studentId added.</span>";
             } else {
-                return "<span class='message-red'>Student no. $studentId not submitted.</span>";
+                return "<span class='message-red'>No data submitted.</span>";
             }
         }
 
         function updateStudent($studentId, $course, $firstName, $middleName, $lastName, $gender, $old_id) {
-            echo $this->id;
+            // echo $this->id;
             $queryString = "UPDATE students SET studentid='$studentId', course='$course', firstname='$firstName', middlename='$middleName', lastname='$lastName', gender='$gender' WHERE studentid='$old_id'";
             if(mysqli_query($this->con, $queryString) == TRUE) {
                 return "<span class='message-green'>Student no. $studentId updated.</span>";
@@ -65,10 +65,8 @@
 			    return "<span class='message-red'>Student no. $studentId deleted</span>";
 		    } else {
 			    return "<span class='message-red'>Student no. $studentId not deleted</span>";
-		    }
+            }
         }
-
-       
     }
 ?>
 

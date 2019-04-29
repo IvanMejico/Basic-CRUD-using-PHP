@@ -1,25 +1,17 @@
 <?php
-	$error['studentid'] = "";
-	$error['firstname'] = "";
-	$error['middlename'] = "";
-	$error['lastname'] = "";
-	$error['gender'] = "";
-
+	$errors = new Errors();
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		if (empty($_POST['studentid'])) {
-			$error['studentid'] = "ID required!";
+			array_push($errors->errorArray, Errors::$IDERROR);
 		}
 		if (empty($_POST['firstname'])) {
-			$error['firstname'] = "Firstname Required";
+			array_push($errors->errorArray, Errors::$FIRSTNAMEERROR);
 		}
 		if (empty($_POST['middlename'])) {
-			$error['middlename'] = "Middlename Required";
+			array_push($errors->errorArray, Errors::$MIDDLENAMEERROR);
 		}
 		if (empty($_POST['lastname'])) {
-			$error['lastname'] = "Lastname Required";
-		}
-		if (empty($_POST['gender'])) {
-			$error['gender'] = "Gender Required";
+			array_push($errors->errorArray, Errors::$LASTNAMEERROR);
 		}
 	}
 ?>

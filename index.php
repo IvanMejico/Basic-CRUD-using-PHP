@@ -1,5 +1,6 @@
 <?php include_once("connect.php") ?>
 <?php include("classes/Student.php")?>
+<?php include("classes/Errors.php")?>
 
 <?php 
 $student = new Student($con); 
