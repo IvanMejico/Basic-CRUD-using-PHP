@@ -54,7 +54,7 @@
 		<div class="input-div">
 			<div class="main-panel">
 				<h1>Edit Student</h1>
-				<form method="POST" action="index.php?edit=<?php echo $studentid ?>">
+				<form method="POST" action="index.php">
 					<input type="hidden" name="old_id" value="<?php echo $studentid ?>">
 					<select name="course" target="self">
 						<option value="bscpe" <?php echo $bscpe ?>>BSCpE</option>

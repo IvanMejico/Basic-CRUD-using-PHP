@@ -8,6 +8,8 @@ $message = "";
 
 <?include("handlers/error_handler.php");?>
 <?include("handlers/delete_handler.php");?>
+<?include("handlers/update_handler.php");?>
+<?include("handlers/submit_handler.php");?>		
 
 
 
