@@ -37,12 +37,12 @@ h1 {
 
 .header {
 	width: 100%;
-	background-color: #ff6900;
+	background-color: #0c4186ce;
 	height: 40px;
 	padding-top: 10px;
 	text-align: center;
-	color: #1b1818;
-	border-bottom: 3px solid #ff7c00;
+	color: #cfcaca;
+	border-bottom: 2px solid #000000;
 }
 
 
@@ -223,12 +223,16 @@ tr:nth-child(odd) td {
 	background-color: rgb(87, 84, 84);
 }
 
+tr:hover td{
+	background-color: rgb(34, 34, 36);
+}
+
 th {
 	background-color: white;
 	padding: 5px;
 }
 
-tr td {
+tr {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
