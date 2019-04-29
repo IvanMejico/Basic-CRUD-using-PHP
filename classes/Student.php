@@ -49,9 +49,9 @@
             }
         }
 
-        function updateStudent($studentId, $course, $firstName, $middleName, $lastName, $gender) {
+        function updateStudent($studentId, $course, $firstName, $middleName, $lastName, $gender, $old_id) {
             echo $this->id;
-            $queryString = "UPDATE students SET studentid='$studentId', course='$course', firstname='$firstName', middlename='$middleName', lastname='$lastName', gender='$gender' WHERE studentid='$studentId'";
+            $queryString = "UPDATE students SET studentid='$studentId', course='$course', firstname='$firstName', middlename='$middleName', lastname='$lastName', gender='$gender' WHERE studentid='$old_id'";
             if(mysqli_query($this->con, $queryString) == TRUE) {
                 return "<span class='message-green'>Student no. $studentId updated.</span>";
             } else {

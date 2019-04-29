@@ -6,10 +6,8 @@ $student = new Student($con);
 $message = "";
 ?>
 
-<?include("handlers/errors.php");?>
-<?include("handlers/submit.php");?>
-<?include("handlers/update.php");?>
-<?include("handlers/delete.php");?>
+<?include("handlers/error_handler.php");?>
+<?include("handlers/delete_handler.php");?>
 
 
 

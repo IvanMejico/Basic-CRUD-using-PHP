@@ -1,3 +1,4 @@
+<?include("handlers/submit_handler.php");?>
 		<div class="input-div">
 			<div class="main-panel">
 				<h1>Add Student</h1>

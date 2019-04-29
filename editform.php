@@ -54,7 +54,8 @@
 		<div class="input-div">
 			<div class="main-panel">
 				<h1>Edit Student</h1>
-				<form method="POST" action="index.php">
+				<form method="POST" action="index.php?edit=<?php echo $studentid ?>">
+					<input type="hidden" name="old_id" value="<?php echo $studentid ?>">
 					<select name="course" target="self">
 						<option value="bscpe" <?php echo $bscpe ?>>BSCpE</option>
 						<option value="bsce" <?php echo $bsce ?>>BSCE</option>
@@ -86,7 +87,7 @@
 					<input type="radio" name="gender" value="female" <?php echo $female ?> >Female
 					<input type="radio" name="gender" value="other" <?php echo $other ?> >Other
 					</p>
-					<p class="p-submit"><input type="submit" name="btn-submit" value="Submit"></p>
+					<p class="p-submit"><input type="submit" name="btn-update" value="Update"></p>
 				</form>
 				<a href="../ol_labactivity" id="cancel">Cancel</a>
 
@@ -97,4 +98,4 @@
 			<?php include('footer.php') ?>
 		</div>
 
-<?php include("handlers/update.php");?>
+<?include("handlers/update_handler.php");?>		

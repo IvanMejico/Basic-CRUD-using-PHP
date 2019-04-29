@@ -1,9 +1,7 @@
 <?php 
-	
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {
-
-		if (isset($_POST['btn-submit']) && isset($_POST['gender'])) {
-
+		if (isset($_POST['btn-update']) && isset($_POST['gender'])) {
+			$old_id = $_POST['old_id'];
 			$studentid = $_POST['studentid'];
 			$course = $_POST['course'];
 			$firstname = $_POST['firstname'];
@@ -13,7 +11,8 @@
 
 
 			//UPDATE DATA FROM THE DATABASE
-			$message = $student->updateStudent($studentid, $course, $firstname, $middlename, $lastname, $gender);
+			$message = $student->updateStudent($studentid, $course, $firstname, $middlename, $lastname, $gender, $old_id);
+			
 		}  else {
 			echo "not submitted";	
 		}	
