@@ -216,10 +216,11 @@ table {
 	border-collapse: collapse;
 	margin-top: 15px;
 	min-width: 816px;
+	border: 1px solid rgb(82, 75, 75);
 }
 
-table, th, td {
-	border: 1px solid black;
+tr:nth-child(odd) td {
+	background-color: rgb(87, 84, 84);
 }
 
 th {
@@ -227,8 +228,13 @@ th {
 	padding: 5px;
 }
 
+tr td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 td {
-	background-color: gray;
+	background-color: rgb(71, 69, 69);
 	color: white;
 	padding: 4px;
 	max-width: 117.333333333px;
