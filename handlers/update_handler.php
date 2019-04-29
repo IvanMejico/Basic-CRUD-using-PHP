@@ -11,7 +11,7 @@
 
 
 			//UPDATE DATA FROM THE DATABASE
-			if (count($errors->errorArray)!=0) {
+			if (count($errors->errorArray)==0) {
 				$message = $student->updateStudent($studentid, $course, $firstname, $middlename, $lastname, $gender, $old_id);
 			}
 		}
